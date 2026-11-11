@@ -10,219 +10,110 @@
 <meta property="og:image" content="img/84AKjal_0000644-1280.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/84AKjal_0000644-2048.webp" media="(min-width: 761px)">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<a class="skip" href="#films">Bỏ qua, tới phần chọn phim</a>
-
 <header class="nav" id="nav">
-  <a class="brand" href="#top" aria-label="NTH Trang — về đầu trang">NTH Trang</a>
+  <a class="brand" href="#top">NTH Trang</a>
   <nav aria-label="Điều hướng chính">
+    <a href="#about">Giới thiệu</a>
     <a href="#films">Cuộn phim</a>
-    <a href="#stories">Câu chuyện</a>
-    <a href="#sessions">Buổi chụp</a>
-    <a href="#about">Về Trang</a>
+    <a href="#gallery">Ảnh</a>
   </nav>
-  <a class="btn btn-small" href="#book">Book lịch</a>
+  <a class="nav-book" href="#book">Book lịch</a>
 </header>
 
 <main id="top">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-text">
-      <p class="eyebrow">Film 35mm · Hà Nội</p>
-      <h1>Chụp ảnh cho những tâm hồn <em>bay bổng</em> và trái tim mơ mộng</h1>
-      <p class="hero-intro">Tôi là Trang. Tôi chụp portrait, couple và cưới bằng máy film — để mỗi bộ ảnh mang đúng màu cảm xúc của bạn.</p>
-      <div class="hero-cta">
-        <a class="btn" href="#films">Chọn cuộn phim của bạn</a>
-        <a class="link-dark" href="#book">Book lịch ngay →</a>
-      </div>
+  <!-- 1. ẢNH MỞ ĐẦU -->
+  <section class="hero" aria-label="Ảnh nổi bật">
+    <div class="slides" id="slides"></div>
+    <div class="hero-foot">
+      <p class="hero-line">Chụp ảnh film 35mm<br>tại Hà Nội</p>
+      <p class="hero-film" id="heroFilm"></p>
     </div>
-    <div class="hero-photo">
-      <picture>
-        <source media="(max-width: 760px)" srcset="img/bkMOlE8_0000041-1280.webp">
-        <img src="img/84AKjal_0000644-2048.webp" alt="Cặp đôi dắt cún đi dạo bên hồ Hoàn Kiếm, chụp trên film" fetchpriority="high">
-      </picture>
-      <p class="hero-edge" aria-hidden="true">KODAK ▸ 24 ▸ 24A ▸ NTH TRANG ▸ 25</p>
-    </div>
+    <a class="scroll-cue" href="#about" aria-label="Cuộn xuống"><span></span></a>
   </section>
 
-  <!-- MANIFESTO -->
-  <section class="manifesto reveal">
-    <p class="lead">Mỗi cuộn phim chỉ có 36 khung hình. Vì vậy tôi không bấm vội — tôi đợi bạn cười thật, đợi nắng chạm vào tóc, đợi cái nhìn mà chỉ hai người hiểu.</p>
-    <ul class="feelings">
-      <li><span>01</span>Nhẹ nhàng như đang trò chuyện, không gồng tạo dáng</li>
-      <li><span>02</span>Màu phim thật — hạt, quầng sáng và những vệt nắng không thể làm giả</li>
-      <li><span>03</span>Hứa với bạn hai điều: cười đến đau bụng, và những bức ảnh để giữ cả đời</li>
-    </ul>
-  </section>
-
-  <!-- FILM CHOOSER -->
-  <section class="films" id="films">
-    <div class="section-head reveal">
-      <p class="eyebrow">Bước 1 · Chọn cuộn phim</p>
-      <h2>Mỗi cuộn phim là một cảm xúc</h2>
-      <p class="sub">Chưa biết chọn gì? Hãy bắt đầu từ cảm giác bạn muốn có khi mở lại bộ ảnh sau nhiều năm.</p>
-    </div>
-
-    <div class="mood reveal" role="group" aria-label="Chọn theo cảm giác">
-      <p class="mood-q">Khi nhìn lại, tôi muốn thấy…</p>
-      <div class="mood-options" id="moodOptions"></div>
-    </div>
-
-    <div class="film-tabs reveal" role="tablist" aria-label="Các cuộn phim" id="filmTabs"></div>
-    <div id="filmPanel" class="film-panel" role="tabpanel" aria-live="polite"></div>
-  </section>
-
-  <!-- COMPARE -->
-  <section class="compare reveal" aria-labelledby="compareTitle">
-    <h3 id="compareTitle">So sánh nhanh</h3>
-    <div class="table-wrap">
-      <table id="compareTable"></table>
-    </div>
-  </section>
-
-  <!-- STORIES -->
-  <section class="stories" id="stories">
-    <div class="section-head reveal">
-      <p class="eyebrow">Câu chuyện</p>
-      <h2>Những ngày tôi được tin tưởng</h2>
-      <p class="sub">Cho dù trên núi cao, bên hồ hay giữa phố cổ — bạn xứng đáng được lưu giữ theo cách của mình.</p>
-    </div>
-    <div class="story-list" id="storyList"></div>
-  </section>
-
-  <!-- SESSIONS -->
-  <section class="sessions" id="sessions">
-    <div class="section-head reveal">
-      <p class="eyebrow">Bước 2 · Chọn buổi chụp</p>
-      <h2>Bạn muốn kể câu chuyện nào?</h2>
-    </div>
-    <div class="session-grid" id="sessionGrid"></div>
-  </section>
-
-  <!-- ABOUT -->
+  <!-- 2. GIỚI THIỆU -->
   <section class="about" id="about">
-    <figure class="about-photo reveal">
-      <img data-photo="M594a6p_00000411" alt="Một khoảnh khắc nắng chiều, chụp trên film" sizes="(max-width: 760px) 100vw, 40vw">
+    <figure class="about-photo">
+      <img data-photo="M594a6p_00000411" alt="Trang trong một buổi chiều nắng, chụp trên film" sizes="(max-width: 760px) 100vw, 42vw">
     </figure>
-    <div class="about-text reveal">
-      <p class="eyebrow">Xin chào, tôi là Trang</p>
-      <h2>Để tôi kể bạn nghe chuyện của tôi, trước khi bạn kể chuyện của mình</h2>
-      <p>Tôi là Nguyễn Thị Huyền Trang — một nhiếp ảnh gia tự học, mê đi bộ đường dài, đang sống và làm việc ở Hà Nội. Bốn năm nay tôi gắn bó với film: thích ngắm nhìn thước film 35mm, yêu những cảm xúc mơ mộng.</p>
-      <p>Tôi cầu toàn và kỹ tính với từng khung hình, vì mỗi tấm ảnh trao đi phải là điều chỉn chu nhất. Nhưng khi đứng trước máy, tôi là người khá bay bổng: thích những câu chuyện ngẫu nhiên về cuộc sống, du lịch và nghệ thuật.</p>
-      <blockquote>“Hãy để tôi được đồng hành và viết lại câu chuyện của bạn.”</blockquote>
-      <div class="about-strip">
-        <img data-photo="ervp0M0_0000632" alt="Cô gái áo khoác be giữa khu chợ" sizes="20vw">
-        <img data-photo="GJaVVoR_000017" alt="Bóng người cầm máy trước hồ lúc hoàng hôn" sizes="20vw">
-        <img data-photo="ervp0M0_IMG_6791" alt="Hoa giấy và nắng chiều" sizes="20vw">
-      </div>
+    <div class="about-text">
+      <p class="label">Xin chào, tôi là Trang</p>
+      <h2>Chụp ảnh cho những tâm hồn bay bổng và trái tim mơ mộng</h2>
+      <p>Tôi là Nguyễn Thị Huyền Trang, nhiếp ảnh gia tự học ở Hà Nội, 4 năm gắn bó với máy film 35mm. Tôi chụp portrait, couple, pre-wedding và cưới.</p>
+      <p>Mỗi cuộn phim chỉ có 36 khung hình, nên tôi không bấm vội. Tôi đợi bạn cười thật, đợi nắng chạm vào tóc. Gặp tôi, bạn sẽ có hai thứ: cười đến đau bụng, và những bức ảnh để giữ cả đời.</p>
+      <a class="text-link" href="#films">Chọn cuộn phim của bạn →</a>
     </div>
   </section>
 
-  <!-- PROCESS -->
-  <section class="process reveal" aria-labelledby="processTitle">
-    <h2 id="processTitle" class="small-title">Từ lời nhắn đầu tiên tới cuộn phim trong tay bạn</h2>
-    <ol>
-      <li><b>Nhắn cho Trang</b><span>Kể về bạn, cuộn phim bạn thích và ngày dự định.</span></li>
-      <li><b>Lên ý tưởng</b><span>Cùng chọn địa điểm, trang phục và khung giờ có ánh sáng hợp với cuộn phim.</span></li>
-      <li><b>Ngày chụp</b><span>Thoải mái, nhiều tiếng cười. Bạn chỉ cần là chính mình.</span></li>
-      <li><b>Tráng &amp; scan</b><span>Phim được tráng, scan và chỉnh màu cẩn thận trước khi gửi tới bạn.</span></li>
-    </ol>
+  <!-- 3. CUỘN PHIM -->
+  <section class="films" id="films">
+    <div class="head">
+      <p class="label">Cuộn phim</p>
+      <h2>Mỗi cuộn phim là một cảm xúc</h2>
+    </div>
+    <div class="film-grid" id="filmGrid"></div>
   </section>
 
-  <!-- FAQ -->
-  <section class="faq reveal" aria-labelledby="faqTitle">
-    <h2 id="faqTitle" class="small-title">Lần đầu chụp film?</h2>
-    <details>
-      <summary>Chụp film có xem lại ảnh ngay được không?</summary>
-      <p>Không — và đó là điều thú vị nhất. Ảnh chỉ hiện ra sau khi tráng phim, nên buổi chụp không bị ngắt quãng bởi màn hình. Bạn sẽ ở trọn trong khoảnh khắc.</p>
-    </details>
-    <details>
-      <summary>Tôi không biết tạo dáng thì sao?</summary>
-      <p>Phần lớn khách hàng của Trang đều vậy. Trang sẽ gợi ý từng chút một, trò chuyện và để bạn tự nhiên — những khung hình đẹp nhất thường đến khi bạn quên mất có máy ảnh.</p>
-    </details>
-    <details>
-      <summary>Chụp buổi tối hay trong nhà tối được không?</summary>
-      <p>Được, hãy chọn Kodak Vision3 500T — cuộn phim điện ảnh sinh ra cho ánh đèn và trời chiều tối. Các cuộn ISO 100 hợp với ánh sáng ban ngày hơn.</p>
-    </details>
-    <details>
-      <summary>Có thể chụp nhiều loại phim trong một buổi không?</summary>
-      <p>Có thể kết hợp, ví dụ ProImage 100 lúc chiều và 500T khi lên đèn. Nhắn Trang để cùng lên kế hoạch nhé.</p>
-    </details>
+  <!-- 4. ẢNH TỪ CÁC CUỘN PHIM -->
+  <section class="gallery-sec" id="gallery">
+    <div class="head">
+      <p class="label">Ảnh từ những cuộn phim</p>
+      <div class="tabs" role="tablist" aria-label="Chọn cuộn phim" id="tabs"></div>
+    </div>
+    <div class="gallery" id="galleryGrid" role="tabpanel"></div>
+    <div class="gallery-actions" id="galleryActions"></div>
   </section>
 
   <!-- BOOK -->
   <section class="book" id="book">
-    <div class="book-bg"><img data-photo="LpL6Q8k_0000212" alt="" sizes="100vw"></div>
-    <div class="book-card reveal">
-      <p class="eyebrow">Bước 3 · Book lịch</p>
-      <h2>Bạn đã sẵn sàng cho cuộc phiêu lưu của mình chưa?</h2>
-      <p class="sub">Điền vài dòng, lời nhắn sẽ được soạn sẵn. Bạn chỉ cần gửi cho Trang qua Instagram hoặc Facebook.</p>
+    <div class="book-inner">
+      <div class="book-intro">
+        <p class="label">Book lịch</p>
+        <h2>Bạn đã sẵn sàng cho cuộc phiêu lưu của mình chưa?</h2>
+        <p>Điền vài dòng, lời nhắn được soạn sẵn. Bấm gửi rồi dán vào khung chat với Trang.</p>
+      </div>
       <form id="bookForm" novalidate>
-        <label>Tên của bạn
-          <input name="name" autocomplete="name" placeholder="VD: Minh Anh" required>
-        </label>
+        <label>Tên của bạn<input name="name" autocomplete="name" placeholder="Minh Anh"></label>
         <div class="row">
-          <label>Buổi chụp
-            <select name="session" id="sessionSelect"></select>
-          </label>
-          <label>Cuộn phim
-            <select name="film" id="filmSelect"></select>
-          </label>
+          <label>Buổi chụp<select name="session" id="sessionSelect"></select></label>
+          <label>Cuộn phim<select name="film" id="filmSelect"></select></label>
         </div>
         <div class="row">
-          <label>Ngày dự kiến
-            <input type="date" name="date">
-          </label>
-          <label>Địa điểm mong muốn
-            <input name="place" placeholder="VD: Hồ Tây, phố cổ…">
-          </label>
+          <label>Ngày dự kiến<input type="date" name="date"></label>
+          <label>Địa điểm<input name="place" placeholder="Hồ Tây, phố cổ…"></label>
         </div>
-        <label>Đôi lời về bạn / ý tưởng
-          <textarea name="note" rows="3" placeholder="Phong cách, trang phục, câu chuyện của hai bạn…"></textarea>
-        </label>
-        <div class="preview" aria-live="polite">
-          <span class="preview-label">Lời nhắn sẽ gửi</span>
-          <p id="msgPreview"></p>
-        </div>
+        <label>Ý tưởng của bạn<textarea name="note" rows="3" placeholder="Phong cách, trang phục, câu chuyện…"></textarea></label>
         <div class="send">
           <button type="button" class="btn" data-send="ig">Gửi qua Instagram</button>
-          <button type="button" class="btn btn-ghost" data-send="fb">Gửi qua Facebook</button>
+          <button type="button" class="btn btn-line" data-send="fb">Gửi qua Facebook</button>
         </div>
-        <p class="hint">Bấm gửi: lời nhắn được chép sẵn, chỉ cần dán vào khung chat.</p>
       </form>
     </div>
   </section>
 </main>
 
 <footer class="footer">
-  <p class="brand">NTH Trang</p>
-  <p>Nhiếp ảnh film 35mm · Hà Nội</p>
-  <p class="social">
-    <a href="https://www.instagram.com/chengchupfilm/" target="_blank" rel="noopener">Instagram @chengchupfilm</a>
+  <span>© 2026 NTH Trang</span>
+  <span class="social">
+    <a href="https://www.instagram.com/chengchupfilm/" target="_blank" rel="noopener">Instagram</a>
     <a href="https://www.facebook.com/thanh.nguyenvanthanh.9615/" target="_blank" rel="noopener">Facebook</a>
-  </p>
-  <p class="copy">© 2026 Nguyễn Thị Huyền Trang</p>
+  </span>
 </footer>
 
-<a class="mobile-cta btn" href="#book">Book lịch chụp</a>
+<a class="mobile-cta" href="#book">Book lịch chụp</a>
 
-<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Xem ảnh cỡ lớn" hidden>
   <button class="lb-close" aria-label="Đóng (Esc)">×</button>
   <button class="lb-prev" aria-label="Ảnh trước">‹</button>
-  <figure>
-    <img id="lbImg" alt="">
-    <figcaption id="lbCap"></figcaption>
-  </figure>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
   <button class="lb-next" aria-label="Ảnh sau">›</button>
 </div>
-
 <div class="toast" id="toast" role="status" hidden></div>
 
 <script src="photos.js"></script>
