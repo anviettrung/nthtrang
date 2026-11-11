@@ -3,120 +3,118 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NTH Trang — Chụp ảnh film 35mm tại Hà Nội</title>
-<meta name="description" content="Nguyễn Thị Huyền Trang — nhiếp ảnh gia chụp film 35mm tại Hà Nội. Portrait, couple, pre-wedding và wedding trên Fuji 100, Kodak Vision3 500T, Kodak ProImage 100, Fuji C200.">
-<meta property="og:title" content="NTH Trang — Chụp ảnh film 35mm tại Hà Nội">
-<meta property="og:description" content="Chụp ảnh cho những tâm hồn bay bổng và trái tim mơ mộng.">
-<meta property="og:image" content="img/84AKjal_0000644-1280.webp">
+<title>NTH Trang</title>
+<meta name="description" content="Nguyễn Thị Huyền Trang — Wedding &amp; Potrait Photographer in HaNoi. Chụp ảnh film 35mm.">
+<meta property="og:title" content="NTH Trang">
+<meta property="og:image" content="img/84AKjal_000058-1280.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Vollkorn:ital,wght@0,400;0,500;0,700;1,400&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-
-<header class="nav" id="nav">
-  <a class="brand" href="#top">NTH Trang</a>
-  <nav aria-label="Điều hướng chính">
-    <a href="#about">Giới thiệu</a>
-    <a href="#films">Cuộn phim</a>
-    <a href="#gallery">Ảnh</a>
-  </nav>
-  <a class="nav-book" href="#book">Book lịch</a>
-</header>
-
-<main id="top">
-
-  <!-- 1. ẢNH MỞ ĐẦU -->
-  <section class="hero" aria-label="Ảnh nổi bật">
-    <div class="slides" id="slides"></div>
-    <div class="hero-foot">
-      <p class="hero-line">Chụp ảnh film 35mm<br>tại Hà Nội</p>
-      <p class="hero-film" id="heroFilm"></p>
-    </div>
-    <a class="scroll-cue" href="#about" aria-label="Cuộn xuống"><span></span></a>
-  </section>
-
-  <!-- 2. GIỚI THIỆU -->
-  <section class="about" id="about">
-    <figure class="about-photo">
-      <img data-photo="M594a6p_00000411" alt="Trang trong một buổi chiều nắng, chụp trên film" sizes="(max-width: 760px) 100vw, 42vw">
-    </figure>
-    <div class="about-text">
-      <p class="label">Xin chào, tôi là Trang</p>
-      <h2>Chụp ảnh cho những tâm hồn bay bổng và trái tim mơ mộng</h2>
-      <p>Tôi là Nguyễn Thị Huyền Trang, nhiếp ảnh gia tự học ở Hà Nội, 4 năm gắn bó với máy film 35mm. Tôi chụp portrait, couple, pre-wedding và cưới.</p>
-      <p>Mỗi cuộn phim chỉ có 36 khung hình, nên tôi không bấm vội. Tôi đợi bạn cười thật, đợi nắng chạm vào tóc. Gặp tôi, bạn sẽ có hai thứ: cười đến đau bụng, và những bức ảnh để giữ cả đời.</p>
-      <a class="text-link" href="#films">Chọn cuộn phim của bạn →</a>
-    </div>
-  </section>
-
-  <!-- 3. CUỘN PHIM -->
-  <section class="films" id="films">
-    <div class="head">
-      <p class="label">Cuộn phim</p>
-      <h2>Mỗi cuộn phim là một cảm xúc</h2>
-    </div>
-    <div class="film-grid" id="filmGrid"></div>
-  </section>
-
-  <!-- 4. ẢNH TỪ CÁC CUỘN PHIM -->
-  <section class="gallery-sec" id="gallery">
-    <div class="head">
-      <p class="label">Ảnh từ những cuộn phim</p>
-      <div class="tabs" role="tablist" aria-label="Chọn cuộn phim" id="tabs"></div>
-    </div>
-    <div class="gallery" id="galleryGrid" role="tabpanel"></div>
-    <div class="gallery-actions" id="galleryActions"></div>
-  </section>
-
-  <!-- BOOK -->
-  <section class="book" id="book">
-    <div class="book-inner">
-      <div class="book-intro">
-        <p class="label">Book lịch</p>
-        <h2>Bạn đã sẵn sàng cho cuộc phiêu lưu của mình chưa?</h2>
-        <p>Điền vài dòng, lời nhắn được soạn sẵn. Bấm gửi rồi dán vào khung chat với Trang.</p>
+<header class="hd hd-over">
+  <a class="logo" href="">NTH Trang</a>
+  <nav class="menu" aria-label="Điều hướng chính">
+    <a href="" aria-current="page">Home</a>
+    <div class="dd">
+      <a href="portfolio/">Portfolio <span class="caret"></span></a>
+      <div class="dd-list">
+        <a href="weddings/">Weddings</a>
+        <a href="elopements/">Potrait</a>
+        <a href="couples/">Couples</a>
       </div>
-      <form id="bookForm" novalidate>
-        <label>Tên của bạn<input name="name" autocomplete="name" placeholder="Minh Anh"></label>
-        <div class="row">
-          <label>Buổi chụp<select name="session" id="sessionSelect"></select></label>
-          <label>Cuộn phim<select name="film" id="filmSelect"></select></label>
-        </div>
-        <div class="row">
-          <label>Ngày dự kiến<input type="date" name="date"></label>
-          <label>Địa điểm<input name="place" placeholder="Hồ Tây, phố cổ…"></label>
-        </div>
-        <label>Ý tưởng của bạn<textarea name="note" rows="3" placeholder="Phong cách, trang phục, câu chuyện…"></textarea></label>
-        <div class="send">
-          <button type="button" class="btn" data-send="ig">Gửi qua Instagram</button>
-          <button type="button" class="btn btn-line" data-send="fb">Gửi qua Facebook</button>
-        </div>
-      </form>
     </div>
-  </section>
+    <a href="about/">About</a>
+    <a href="contact/">Contact</a>
+  </nav>
+  <button class="burger" aria-label="Mở menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+<div class="mnav" hidden>
+  <button class="mnav-close" aria-label="Đóng menu">×</button>
+  <a href="">Home</a>
+  <a href="portfolio/">Portfolio</a>
+  <a class="sub" href="weddings/">Weddings</a>
+  <a class="sub" href="elopements/">Potrait</a>
+  <a class="sub" href="couples/">Couples</a>
+  <a href="about/">About</a>
+  <a href="contact/">Contact</a>
+</div>
+<main>
+
+<section class="hero hero-home" aria-label="Ảnh nổi bật">
+  <div class="hslides"><div class="hs on"><img src="img/84AKjal_000058-1280.webp" srcset="img/84AKjal_000058-640.webp 640w, img/84AKjal_000058-1280.webp 1280w, img/84AKjal_000058-2048.webp 2048w" sizes="100vw" width="2500" height="1406" alt="" decoding="async"></div><div class="hs"><img src="img/yr4WKd4_0000656-1280.webp" srcset="img/yr4WKd4_0000656-640.webp 640w, img/yr4WKd4_0000656-1280.webp 1280w, img/yr4WKd4_0000656-2048.webp 2048w" sizes="100vw" width="2500" height="1678" alt="" decoding="async" loading="lazy"></div></div>
+  <div class="hero-in">
+    <h1 class="h-xl">Chụp ảnh cho những tâm hồn bay bổng và trái tim mơ mộng</h1>
+    <div class="hero-bottom">
+      <a class="btn" href="about/">Read More</a>
+      <p class="sub right">Wedding &amp; Potrait Photographer In HaNoi</p>
+    </div>
+    <div class="hero-nav">
+      <button class="hprev" aria-label="Ảnh trước"><svg viewBox="0 0 26 14" width="26" height="14" aria-hidden="true"><path d="M7 1 1 7l6 6M1 7h25" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
+      <span class="count"><b class="hcur">01</b><i>/</i><span>02</span></span>
+      <button class="hnext" aria-label="Ảnh sau"><svg viewBox="0 0 26 14" width="26" height="14" aria-hidden="true"><path d="M19 1l6 6-6 6M25 7H0" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<section class="sec intro">
+  <div class="intro-img"><img src="img/aK6n0zm_IMG_7895-1280.webp" srcset="img/aK6n0zm_IMG_7895-640.webp 640w, img/aK6n0zm_IMG_7895-1280.webp 1280w, img/aK6n0zm_IMG_7895-2048.webp 2048w" sizes="(max-width:760px) 100vw, 45vw" width="2500" height="3333" alt="" decoding="async" loading="lazy" data-full="img/aK6n0zm_IMG_7895-2048.webp"></div>
+  <div class="intro-txt">
+    <h2 class="h-s bold">XIN CHÀO, TÔI LÀ TRANG</h2>
+    <p class="body dark">Tôi là <span class="brown">một nhiếp ảnh gia tự học, người đam mê đi bộ đường dài</span>, hiện đang sinh sống và làm việc tại Hà Nội, Việt Nam.</p>
+    <p class="body dark">Với thế mạnh về chụp film , tôi đã có 4 năm kinh nghiệm làm việc trong ngành , sản xuất hình ảnh.</p>
+    <p class="body dark">Bản thân tôi là một người cầu toàn và kĩ tính, nhất là trong sản phảm mình thực hiện. Mọi hình ảnh tôi muốn mang đến cho khách hàng là những điều chỉn chu và hài lòng nhất. Vậy nên, mong khách hàng cũng luôn tin tưởng và đồng hành cùng tôi trong các dự án lớn nhỏ trong suốt thời gian dài.</p>
+  </div>
+</section>
+
+<section class="sec narrow narrow-s">
+  <h2 class="h-m center">Dù Là ....</h2>
+  <p class="body">Cho dù đó là trên núi cao, trên bãi biển gần biển, trong đồng cỏ trong rừng - bạn đều xứng đáng được kết hôn theo cách bạn muốn. Tôi chắc chắn sẽ giúp bạn lên kế hoạch và lưu giữ những kỷ niệm đẹp đó cho gia đình và các con. Hãy xem một số câu chuyện khách hàng yêu thích của tôi .</p>
+</section>
+
+<section class="carousel lb-group" aria-label="Câu chuyện khách hàng">
+  <div class="ctrack"><div class="cs"><img src="img/aK6n0pQ_000035-1280.webp" srcset="img/aK6n0pQ_000035-640.webp 640w, img/aK6n0pQ_000035-1280.webp 1280w, img/aK6n0pQ_000035-2048.webp 2048w" sizes="(max-width:760px) 92vw, 66vw" width="2500" height="1678" alt="" decoding="async" loading="lazy" data-full="img/aK6n0pQ_000035-2048.webp"></div><div class="cs"><img src="img/aK6n0pQ_13-411-1280.webp" srcset="img/aK6n0pQ_13-411-640.webp 640w, img/aK6n0pQ_13-411-1280.webp 1280w, img/aK6n0pQ_13-411-2048.webp 2048w" sizes="(max-width:760px) 92vw, 66vw" width="2500" height="1674" alt="" decoding="async" loading="lazy" data-full="img/aK6n0pQ_13-411-2048.webp"></div><div class="cs"><img src="img/aK6n0pQ_13-1280.webp" srcset="img/aK6n0pQ_13-640.webp 640w, img/aK6n0pQ_13-1280.webp 1280w, img/aK6n0pQ_13-2048.webp 2048w" sizes="(max-width:760px) 92vw, 66vw" width="2500" height="1675" alt="" decoding="async" loading="lazy" data-full="img/aK6n0pQ_13-2048.webp"></div><div class="cs"><img src="img/aK6n0pQ_18-7-1280.webp" srcset="img/aK6n0pQ_18-7-640.webp 640w, img/aK6n0pQ_18-7-1280.webp 1280w, img/aK6n0pQ_18-7-2048.webp 2048w" sizes="(max-width:760px) 92vw, 66vw" width="2500" height="1675" alt="" decoding="async" loading="lazy" data-full="img/aK6n0pQ_18-7-2048.webp"></div><div class="cs"><img src="img/aK6n0pQ_000004-1280.webp" srcset="img/aK6n0pQ_000004-640.webp 640w, img/aK6n0pQ_000004-1280.webp 1280w, img/aK6n0pQ_000004-2048.webp 2048w" sizes="(max-width:760px) 92vw, 66vw" width="2500" height="1675" alt="" decoding="async" loading="lazy" data-full="img/aK6n0pQ_000004-2048.webp"></div><div class="cs"><img src="img/aK6n0pQ_0000608-1280.webp" srcset="img/aK6n0pQ_0000608-640.webp 640w, img/aK6n0pQ_0000608-1280.webp 1280w, img/aK6n0pQ_0000608-2048.webp 2048w" sizes="(max-width:760px) 92vw, 66vw" width="2500" height="1692" alt="" decoding="async" loading="lazy" data-full="img/aK6n0pQ_0000608-2048.webp"></div><div class="cs"><img src="img/aK6n0pQ_00000681-1280.webp" srcset="img/aK6n0pQ_00000681-640.webp 640w, img/aK6n0pQ_00000681-1280.webp 1280w, img/aK6n0pQ_00000681-2048.webp 2048w" sizes="(max-width:760px) 92vw, 66vw" width="2500" height="1692" alt="" decoding="async" loading="lazy" data-full="img/aK6n0pQ_00000681-2048.webp"></div><div class="cs"><img src="img/aK6n0pQ_000067-1280.webp" srcset="img/aK6n0pQ_000067-640.webp 640w, img/aK6n0pQ_000067-1280.webp 1280w, img/aK6n0pQ_000067-2048.webp 2048w" sizes="(max-width:760px) 92vw, 66vw" width="2500" height="1702" alt="" decoding="async" loading="lazy" data-full="img/aK6n0pQ_000067-2048.webp"></div></div>
+  <div class="cnav">
+    <button class="cprev" aria-label="Ảnh trước"><svg viewBox="0 0 26 14" width="26" height="14" aria-hidden="true"><path d="M7 1 1 7l6 6M1 7h25" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
+    <span class="count"><b class="ccur">01</b><i>/</i><span>08</span></span>
+    <button class="cnext" aria-label="Ảnh sau"><svg viewBox="0 0 26 14" width="26" height="14" aria-hidden="true"><path d="M19 1l6 6-6 6M25 7H0" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
+  </div>
+</section>
+
+<section class="sec cats"><a class="cat cat-side" href="elopements/">
+      <span class="cat-img"><img src="img/7OAm8pG_0000041-1280.webp" srcset="img/7OAm8pG_0000041-640.webp 640w, img/7OAm8pG_0000041-1280.webp 1280w, img/7OAm8pG_0000041-2048.webp 2048w" sizes="(max-width:760px) 100vw, 37vw" width="2456" height="3637" alt="" decoding="async" loading="lazy"><span class="cat-film">fuji 100 nội địa</span></span>
+      <span class="h-s">Potrait</span></a><a class="cat cat-mid" href="weddings/">
+      <span class="cat-img"><img src="img/aK6bM5m_000037-1280.webp" srcset="img/aK6bM5m_000037-640.webp 640w, img/aK6bM5m_000037-1280.webp 1280w, img/aK6bM5m_000037-2048.webp 2048w" sizes="(max-width:760px) 100vw, 37vw" width="2373" height="3536" alt="" decoding="async" loading="lazy"><span class="cat-film">kodak vision 500T</span></span>
+      <span class="h-s">Pre wedings</span></a><a class="cat cat-side" href="couples/">
+      <span class="cat-img"><img src="img/9eAzM9G_000064-1280.webp" srcset="img/9eAzM9G_000064-640.webp 640w, img/9eAzM9G_000064-1280.webp 1280w, img/9eAzM9G_000064-2048.webp 2048w" sizes="(max-width:760px) 100vw, 37vw" width="2311" height="3462" alt="" decoding="async" loading="lazy"><span class="cat-film">proimage 100</span></span>
+      <span class="h-s">Couples</span></a></section>
+
+<section class="sec films" id="films">
+  <p class="eyebrow center">Cuộn phim</p>
+  <h2 class="h-m center">Mỗi cuộn phim là một cảm xúc</h2>
+  <div class="film-grid" id="filmGrid"></div>
+</section>
+<section class="sec film-gallery" id="gallery">
+  <p class="eyebrow center">Ảnh từ những cuộn phim</p>
+  <div class="tabs" role="tablist" aria-label="Chọn cuộn phim" id="tabs"></div>
+  <div class="fgal" id="galleryGrid" role="tabpanel"></div>
+  <div class="fgal-actions" id="galleryActions"></div>
+</section>
+
 </main>
-
-<footer class="footer">
+<footer class="ft">
   <span>© 2026 NTH Trang</span>
-  <span class="social">
-    <a href="https://www.instagram.com/chengchupfilm/" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://www.facebook.com/thanh.nguyenvanthanh.9615/" target="_blank" rel="noopener">Facebook</a>
-  </span>
+  <a href="#" class="totop" aria-label="Lên đầu trang"><svg viewBox="0 0 14 20" width="14" height="20" aria-hidden="true"><path d="M1 7l6-6 6 6M7 1v19" fill="none" stroke="currentColor" stroke-width="1.1"/></svg></a>
 </footer>
-
-<a class="mobile-cta" href="#book">Book lịch chụp</a>
-
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Xem ảnh cỡ lớn" hidden>
   <button class="lb-close" aria-label="Đóng (Esc)">×</button>
-  <button class="lb-prev" aria-label="Ảnh trước">‹</button>
+  <button class="lb-prev" aria-label="Ảnh trước"><svg viewBox="0 0 26 14" width="26" height="14" aria-hidden="true"><path d="M7 1 1 7l6 6M1 7h25" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
   <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
-  <button class="lb-next" aria-label="Ảnh sau">›</button>
+  <button class="lb-next" aria-label="Ảnh sau"><svg viewBox="0 0 26 14" width="26" height="14" aria-hidden="true"><path d="M19 1l6 6-6 6M25 7H0" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></button>
 </div>
-<div class="toast" id="toast" role="status" hidden></div>
-
-<script src="photos.js"></script>
-<script src="app.js"></script>
+<script src="assets/photos.js"></script>
+<script src="assets/films.js"></script>
+<script src="assets/app.js"></script>
 </body>
 </html>
